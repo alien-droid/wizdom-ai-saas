@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const rubik = Rubik({
   variable: "--font-rubik",
@@ -9,7 +10,8 @@ const rubik = Rubik({
 
 export const metadata: Metadata = {
   title: "Wizdom.ai",
-  description: "AI (SaaS) Teaching Platform for Educators, Students, and Parents",
+  description:
+    "AI (SaaS) Teaching Platform for Educators, Students, and Parents",
 };
 
 export default function RootLayout({
@@ -19,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${rubik.variable} antialiased`}>{children}</body>
+      <body className={`${rubik.variable} antialiased`}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
