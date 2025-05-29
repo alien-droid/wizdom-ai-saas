@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ClerkProvider } from "@clerk/nextjs";
 import { Rubik } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -22,8 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${rubik.variable} antialiased`}>
-        <Navbar />
-        {children}
+        <ClerkProvider appearance={{ variables: { colorPrimary: "#fe5933" } }}>
+          <Navbar />
+          {children}
+        </ClerkProvider>
       </body>
     </html>
   );

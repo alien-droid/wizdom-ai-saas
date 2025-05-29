@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { usePathname } from "next/navigation";
 import React from "react";
 
@@ -31,13 +32,22 @@ const Navbar = () => {
             <Link
               key={index}
               href={item.href}
-              className={cn(pathname === item.href && "text-primary font-semibold")}
+              className={cn(
+                pathname === item.href && "text-primary font-semibold"
+              )}
             >
               <p className="capitalize">{item.name}</p>
             </Link>
           ))}
         </nav>
-        <p>Sign In</p>
+        <SignedOut>
+          <SignInButton>
+            <button className="btn-signin">Sign In</button>
+          </SignInButton>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
       </div>
     </nav>
   );
