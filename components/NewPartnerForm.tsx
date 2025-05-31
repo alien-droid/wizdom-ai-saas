@@ -24,6 +24,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { subjects } from "@/constants";
 import { Textarea } from "@/components/ui/textarea";
+import { createPartner } from "@/lib/actions/partner.actions";
+import { redirect } from "next/navigation";
 
 const formSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -47,8 +49,14 @@ const NewPartnerForm = () => {
     },
   });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log("Form submitted with data:", values);
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    const partner = await createPartner(values);
+    if (partner) {
+      redirect(`/partners/${partner.id}`);
+    } else {
+      console.log("Failed to create partner");
+      redirect("/");
+    }
   };
 
   return (

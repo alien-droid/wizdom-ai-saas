@@ -19,7 +19,7 @@ interface PartnersListProps {
 const PartnersList = ({ title, partners, classNames }: PartnersListProps) => {
   return (
     <article className={cn("companion-list", classNames)}>
-      <h2 className="font-bold text-3xl">Recent Lessons</h2>
+      <h2 className="font-bold text-3xl">{title}</h2>
       <Table>
         <TableHeader>
           <TableRow>
