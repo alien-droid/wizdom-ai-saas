@@ -30,7 +30,7 @@ const NewPartner = async () => {
             height={240}
           />
           <div className="cta-badge">Upgrade your plan.</div>
-          <h1>You've reached the limit of active learning partners.</h1>
+          <h1>You&apos;ve reached the limit of active learning partners.</h1>
           <p>
             Upgrade to create more learning partners and premium features. 🚀
           </p>

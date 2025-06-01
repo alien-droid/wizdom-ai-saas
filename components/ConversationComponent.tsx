@@ -75,7 +75,7 @@ const ConversationComponent = ({
       vapi.off("speech-start", onSpeechStart);
       vapi.off("speech-end", onSpeechEnd);
     };
-  }, []);
+  });
 
   const toggleMic = () => {
     const isMuted = vapi.isMuted();
@@ -94,7 +94,7 @@ const ConversationComponent = ({
       clientMessages: ["transcript"],
       serverMessages: [],
     };
-    // @ts-expect-error
+    // @ts-expect-error (vapi.start is not a function)
     vapi.start(configureAssistant(voice, style), assistant);
   };
 
