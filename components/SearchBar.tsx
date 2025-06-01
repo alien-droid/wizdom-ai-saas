@@ -36,6 +36,7 @@ const SearchBar = () => {
         }
       }
     }, 500);
+    return () => clearTimeout(debounceFn);
   }, [searchQuery, router, searchParams, pathname]);
 
   return (

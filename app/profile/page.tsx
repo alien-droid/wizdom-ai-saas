@@ -6,6 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import {
+  getBookmarkedPartners,
   getUserPartners,
   getUserSessions,
 } from "@/lib/actions/partner.actions";
@@ -22,6 +23,7 @@ const Profile = async () => {
 
   const partners = await getUserPartners(user.id);
   const sessions = await getUserSessions(user.id);
+  const bookmarks = await getBookmarkedPartners(user.id);
 
   return (
     <main className="min-lg:w-3/4">
@@ -70,6 +72,14 @@ const Profile = async () => {
         </div>
       </section>
       <Accordion type="multiple">
+        <AccordionItem value="bookmarks">
+          <AccordionTrigger className="text-2xl font-bold">
+            Bookmarked Lessons
+          </AccordionTrigger>
+          <AccordionContent>
+            <PartnersList title="Bookmarked Lessons" partners={bookmarks} />
+          </AccordionContent>
+        </AccordionItem>
         <AccordionItem value="recent">
           <AccordionTrigger className="text-2xl font-bold">
             Recent Lessons
