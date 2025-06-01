@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎓 Wizdom.ai - Real-Time AI-Powered Learning Platform  
 
-## Getting Started
+Wizdom.ai is a modern LMS SaaS application that powers real-time, interactive teaching sessions using AI. It enables learners to engage in dynamic classrooms with their choice of **topic, style, subject and duration** with communication, session tracking, and intelligent insights. Built with Vapi, Supabase, Next.js, and Clerk, it delivers a scalable, secure, and monitored platform.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### ✨ Features  
+- **Real-Time AI Teaching**: Host or attend AI-enhanced live sessions with intelligent interactions.  
+- **Interactive Classrooms**: Tools to facilitate participation, Q&A, and collaborative learning.  
+- **User Management**: Seamless authentication and session control with Clerk.  
+- **Reliable Backend**: Scalable and reactive backend powered by Supabase.  
+- **Monitoring & Alerts**: Real-time monitoring and error tracking using Sentry.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🛠 Dependencies  
+- AI Audio/Video Layer - [Vapi](https://vapi.ai/)  
+- Authentication - [Clerk](https://clerk.com/)  
+- Backend and Realtime DB - [Supabase](https://supabase.com/)  
+- Web Framework - [Next.js](https://nextjs.org/)  
+- Monitoring and Logging - [Sentry](https://sentry.io/)  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+### 🚀 How to Use  
+1. Sign up or log in securely using Clerk.  
+2. Create or join a classroom session through the Next.js interface.  
+3. Experience real-time AI-powered teaching and interaction via Vapi.  
+4. All session data and activity are tracked and stored in Supabase.  
+5. Issues and performance are monitored continuously via Sentry.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#### 🏗 Built with ❤️ using Vapi, Supabase, Next.js, Clerk, and Sentry  
