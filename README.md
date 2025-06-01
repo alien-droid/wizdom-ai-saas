@@ -34,7 +34,7 @@ Wizdom.ai is a modern LMS SaaS application that powers real-time, interactive te
 ### 🗒️ Set Up Environment Variables
 
 Create a new file named .env in the root of your project and add the following content:
-``
+`
 # Sentry
 SENTRY_AUTH_TOKEN=
 
@@ -52,5 +52,5 @@ NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL=/
 NEXT_PUBLIC_SUPABASE_URL=
 NEXT_PUBLIC_SUPABASE_ANON_KEY=
 
-``
+`
 #### 🏗 Built with ❤️ using Vapi, Supabase, Next.js, Clerk, and Sentry  
